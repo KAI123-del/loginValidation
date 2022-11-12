@@ -26,6 +26,9 @@
   height: 100vh;
   position: relative;
 }
+.newstyle{
+  background-color: #707070;
+}
 
 .mainDiv {
   width: 30%;
