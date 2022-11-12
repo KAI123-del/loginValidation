@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- page wrapper -->
+    <div class="pageWrapper">
+      <!-- form wrapper div -->
+      <div class="mainDiv">
+        <p>Login</p>
+        <form>
+          <!-- email -->
+          <input id="email"  type="email" class="new" onchange="emailHandler(event.target.value)" placeholder="Enter your Email" />
+
+          <!-- password -->
+          <input id="pass" type="password" onchange="passwordHandler(event.target.value)" placeholder="Enter Your Password" />
+        </form>
+        <button onclick="submitHandler()">Submit</button>
+      </div>
+      <div id="alertMsgId" class="alertMsg"></div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+<!-- login validation -->
+<!-- basic popup -->
+<!-- error popup -->
+<!-- success popup -->
+
+<!-- next day -->
+<!-- modal  -->
+
+<!-- validation scenarios -->
+<!-- fields are empty -->
+<!-- email validation ... email contains @ -->
+<!-- password validation ... length should be 7 or greater -->
