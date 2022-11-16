@@ -12,17 +12,75 @@
     <div class="pageWrapper">
       <!-- form wrapper div -->
       <div class="mainDiv">
-        <p>Login</p>
+        <p class="loginP">Login</p>
         <form>
           <!-- email -->
-          <input id="email"  type="email" class="new" onchange="emailHandler(event.target.value)" placeholder="Enter your Email" />
+          <input
+            id="email"
+            type="email"
+            class="new"
+            onchange="emailHandler(event.target.value)"
+            placeholder="Enter your Email"
+          />
 
           <!-- password -->
-          <input id="pass" type="password" onchange="passwordHandler(event.target.value)" placeholder="Enter Your Password" />
+          <input
+            id="pass"
+            type="password"
+            onchange="passwordHandler(event.target.value)"
+            placeholder="Enter Your Password"
+          />
         </form>
-        <button onclick="submitHandler()">Submit</button>
+        <button class="loginButton" onclick="submitHandler()">Submit</button>
       </div>
       <div id="alertMsgId" class="alertMsg"></div>
+    </div>
+
+    <!-- header -->
+    <div class="header">
+      <p class="headerText1">Old School</p>
+      <div class="headerRightDiv">
+        <p>HOME</p>
+        <p>SERVICES</p>
+        <p>ABOUT US</p>
+        <p>CONTACT</p>
+      </div>
+      <div onclick="headerModalAnimation()" class="hamburgerIcon">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div id="hamburgerSlideDiv"  class="hamburgerSlideDiv">
+      <p>HOME</p>
+      <p>SERVICES</p>
+      <p>ABOUT US</p>
+      <p>CONTACT</p>
+    </div>
+
+    <div class="heroDiv">
+      <!-- button -->
+      <button
+        id="openModalButton"
+        onclick="openModalHandler()"
+        class="openModalButton"
+      >
+        Click To Open Modal
+      </button>
+
+      <!-- modal -->
+      <div id="modal" class="modal">
+        <p>Are You Sure You Want to Delete This Item?</p>
+        <div>
+          <button id="closeModal" onclick="closeModalHandler()">Cancel</button>
+          <button>Yes</button>
+        </div>
+      </div>
+      <div
+        id="modalBackDrop"
+        onclick="closeModalHandler()"
+        class="modalBackDrop"
+      ></div>
     </div>
 
     <script src="./main.js"></script>
@@ -33,11 +91,17 @@
 <!-- basic popup -->
 <!-- error popup -->
 <!-- success popup -->
-
-<!-- next day -->
-<!-- modal  -->
-
 <!-- validation scenarios -->
 <!-- fields are empty -->
 <!-- email validation ... email contains @ -->
 <!-- password validation ... length should be 7 or greater -->
+
+<!-- modal  -->
+<!-- 1: on mobile device header should only contain a logo and modal icon -->
+<!-- 2: screen will contain a button and onClick will  show the modal popUp  -->
+<!-- modal using external resources -->
+
+<!-- onClick functionality and the logic behind modal popUp -->
+<!-- 1: after clicking on the button , it should disappear -->
+<!-- 2: modal should popUp -->
+<!-- 3: onClick on the modal close button , modal should disappear and button should appear -->

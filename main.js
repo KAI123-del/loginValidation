@@ -112,3 +112,60 @@ const submitHandler = () => {
  * we can make javaScript to pause the execution on particular line 
  */
 
+
+
+// Modal popUp logic and working :
+
+
+let isShowModal;
+
+const openModalHandler = () => {
+    console.log("clicked")
+    isShowModal = true;
+    if (isShowModal) {
+        const el = document.getElementById('openModalButton');
+        const modalEl = document.getElementById('modal');
+        const modalBackEl = document.getElementById('modalBackDrop');
+        el.style.display = 'none';
+        modalEl.style.display = 'block'
+        modalBackEl.style.display = 'block'
+    } modalBackEl.style.display = 'none'
+}
+
+
+
+const closeModalHandler = () => {
+    isShowModal = false;
+
+    if (isShowModal === false) {
+        const el = document.getElementById('openModalButton');
+        const modalEl = document.getElementById('modal');
+        const modalBackEl = document.getElementById('modalBackDrop');
+        el.style.display = 'block';
+        modalEl.style.display = 'none'
+        modalBackEl.style.display = 'none'
+    }
+}
+
+
+let count = 0;
+const headerModalAnimation = () => {
+    const el = document.getElementById('hamburgerSlideDiv')
+    if (count % 2 || count === 0) {
+        el.classList.add('animateHeader')
+    } else {
+        el.classList.remove('animateHeader')
+    }
+    count++;
+}
+
+
+
+
+
+
+
+
+
+
+

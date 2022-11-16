@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: italiana;
+  src: url("./Assets/Fonts/Italiana.woff");
+}
+
+@font-face {
   font-family: quintoRegular;
   src: url("./Assets/Fonts/QuinfoRegular.otf");
 }
@@ -19,7 +24,7 @@
 }
 
 .pageWrapper {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   border: 2px solid red;
@@ -41,7 +46,7 @@ form {
   flex-direction: column;
 }
 
-p {
+.loginP {
   text-align: center;
   font-size: 2rem;
 }
@@ -59,7 +64,7 @@ input:first-child {
   margin: 6vh 0 4vh 0;
 }
 
-button {
+.loginButton {
   width: 100%;
   font-size: 1.3rem;
   padding: 1vh 0 1vh 0;
@@ -70,7 +75,7 @@ button {
   color: #d1fae5;
 }
 
-button:hover {
+.loginButton:hover {
   scale: 1.05;
   transition-duration: 0.5s;
   background-color: #d1fae5;
@@ -90,6 +95,214 @@ button:hover {
   animation: slideDown 2s ease-in-out;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 2vw;
+  box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.75);
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.headerText1 {
+  font-family: italiana;
+  font-size: 2rem;
+  color: brown;
+  font-weight: bolder;
+}
+
+.headerRightDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  font-size: 1.2rem;
+  font-family: quintoRegular;
+  letter-spacing: 0.2vw;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.heroDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+}
+
+.modalBackDrop {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}
+
+.modal {
+  display: none;
+  width: 35%;
+  height: 25vh;
+  padding: 2vh 2vw;
+  z-index: 10;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.modal p:first-child {
+  font-family: quintoRegular;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.openModalButton {
+  border: none;
+  padding: 1.8vh 3vw;
+  border-radius: 6px;
+  font-family: italiana;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.15vw;
+  background-color: #ca8a04;
+  color: #fef08a;
+  transition-duration: 0.9s;
+}
+
+.modal div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18%;
+}
+
+.modal div button {
+  border: none;
+  width: 8vw;
+  height: 6vh;
+  border-radius: 6px;
+  font-family: quintoRegular;
+  font-size: 1.3rem;
+  letter-spacing: 0.15vw;
+  font-weight: 800;
+}
+
+.modal div button:first-child {
+  margin-right: 2vw;
+}
+
+.modal div button:last-child {
+  background-color: red;
+}
+
+.openModalButton:hover {
+  background-color: #fef08a;
+  color: #ca8a04;
+}
+
+.hamburgerSlideDiv {
+  display: none;
+}
+
+.animateHeader {
+  animation: headerSlide 0.9s ease-in-out forwards;
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+  .headerRightDiv {
+    display: none;
+  }
+
+  .hamburgerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hamburgerIcon p {
+    width: 6vw;
+    height: 0.8vh;
+    background-color: gray;
+    border-radius: 6px;
+  }
+
+  .hamburgerIcon p:first-child {
+    margin-bottom: 1vh;
+  }
+
+  .hamburgerIcon p:last-child {
+    margin-top: 1vh;
+  }
+
+  .hamburgerSlideDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid red;
+    height: 24vh;
+    padding: 2vh 0;
+    font-family: quintoRegular;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.18vw;
+    position: absolute;
+    top: -30vh;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerRightDiv {
+    display: none;
+  }
+
+  .hamburgerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hamburgerIcon p {
+    width: 11vw;
+    height: 0.8vh;
+    background-color: gray;
+    border-radius: 6px;
+  }
+
+  .hamburgerIcon p:first-child {
+    margin-bottom: 1vh;
+  }
+
+  .hamburgerIcon p:last-child {
+    margin-top: 1vh;
+  }
+
+  .hamburgerSlideDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid red;
+    height: 24vh;
+    padding: 2vh 0;
+    font-family: quintoRegular;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 0.18vw;
+    position: absolute;
+    top: -30vh;
+    right: 0;
+    left: 0;
+  }
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(0);
@@ -102,5 +315,15 @@ button:hover {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes headerSlide {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(145%);
   }
 }
